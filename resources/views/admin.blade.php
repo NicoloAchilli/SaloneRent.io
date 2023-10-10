@@ -6,7 +6,7 @@
 <div class="static">
     <h3>Area Amministratore</h3>
     <p>Benvenuto {{ Auth::user()->name }} {{ Auth::user()->surname }}</p>
-    <p>Seleziona la funzione da attivare</p>
+    <p>Seleziona la funzione da </p>
 </div>
 @endsection
 
