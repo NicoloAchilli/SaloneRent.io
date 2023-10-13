@@ -20,6 +20,8 @@ class Account extends Model
         'password',
         'email',
         'birth',
+        'occupation',
+        'residence',
         'last_access',
         'remember_token'
     ];
