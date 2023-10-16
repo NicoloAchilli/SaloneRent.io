@@ -18,10 +18,11 @@ class Account extends Model
         'surname',
         'username',
         'password',
-        'email',
         'birth',
+        'email',
         'occupation',
         'residence',
+        'image_path',
         'last_access',
         'remember_token'
     ];
@@ -29,6 +30,11 @@ class Account extends Model
     public function user()
     {
         return $this->belongsTo(User::class, 'id', 'id');
+    }
+
+    public function staff()
+    {
+        return $this->belongsTo(Staff::class, 'id', 'id');
     }
 
 }

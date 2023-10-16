@@ -13,9 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->id();
-//            $table->foreignId('id')->constrained('accounts')->cascadeOnDelete();
+        Schema::create('user', function (Blueprint $table) {
+            $table->primary('id');
+            $table->foreignId('id')->constrained('account')->cascadeOnDelete();
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('user');
     }
 };
