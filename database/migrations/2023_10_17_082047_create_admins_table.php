@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('staff', function (Blueprint $table) {
+        Schema::create('admins', function (Blueprint $table) {
             $table->primary('id');
             $table->foreignId('id')->constrained('accounts')->cascadeOnDelete();
             $table->timestamps();
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('staff');
+        Schema::dropIfExists('admins');
     }
 };
