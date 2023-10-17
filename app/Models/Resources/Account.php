@@ -20,8 +20,6 @@ class Account extends Model
         'password',
         'birth',
         'email',
-        'occupation',
-        'residence',
         'image_path',
         'last_access',
         'remember_token'

@@ -16,6 +16,8 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->primary('id');
             $table->foreignId('id')->constrained('accounts')->cascadeOnDelete();
+            $table->string('occupation', 32)->nullable();
+            $table->string('residence', 64)->nullable();
             $table->timestamps();
         });
     }
