@@ -2,10 +2,8 @@
 
 namespace Database\Seeders;
 
-use App\Models\Admin;
 use App\Models\Resources\Account;
-use App\Models\Resources\Staff;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Resources\Admin;
 use Illuminate\Database\Seeder;
 
 class AdminSeeder extends Seeder

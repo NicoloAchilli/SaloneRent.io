@@ -26,6 +26,8 @@ return new class extends Migration
             $table->string('image_path', 128)->nullable();
             $table->timestamp('last_access')->nullable();
             $table->timestamp('email_verified_at')->nullable();
+//            $table->timestamp('removed_at')->nullable()->default(null);
+//            $table->rememberToken();
             $table->timestamps();
         });
     }
