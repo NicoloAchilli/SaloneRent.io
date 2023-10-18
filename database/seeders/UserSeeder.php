@@ -23,8 +23,8 @@ class UserSeeder extends Seeder
             'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',  // password
             'birth' => '2001-01-01',
             'email' => 'user@user.com',
-            'occupation'=> '',
-            'residence'=> '',
+            'occupation'=> 'mechanical',
+            'residence'=> 'Via serpe verdi, 12',
             'image_path' => null,
             'last_access' => now()
         ];

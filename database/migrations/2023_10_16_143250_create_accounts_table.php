@@ -21,6 +21,8 @@ return new class extends Migration
             $table->string('password');
             $table->date('birth')->nullable();
             $table->string('email', 256)->nullable();
+            $table->string('occupation', 32)->nullable();
+            $table->string('residence', 64)->nullable();
             $table->string('image_path', 128)->nullable();
             $table->timestamp('last_access')->nullable();
             $table->timestamp('email_verified_at')->nullable();

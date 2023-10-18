@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Admin;
 use App\Models\Resources\Account;
 use App\Models\Resources\Staff;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -30,6 +31,6 @@ class AdminSeeder extends Seeder
         $admin = [
             'id' => $account->id
         ];
-        Staff::create($admin);
+        Admin::create($admin);
     }
 }
