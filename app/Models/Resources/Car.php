@@ -9,14 +9,20 @@ class Car extends Model
 {
     use HasFactory;
 
+    protected $guarded = ['id'];
     protected $fillable = [
-        'id',
         'plate',
         'brand',
         'model',
         'number_of_seats',
         'number_of_doors',
         'transmission',
-        'fuel'
+        'fuel',
+        'price'
     ];
+
+    public function offer()
+    {
+        return $this->hasOne(Offer::class);
+    }
 }
