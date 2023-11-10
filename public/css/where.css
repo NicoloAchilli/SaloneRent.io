@@ -1,0 +1,16 @@
+.contact-container{
+    /*display: flex;*/
+    text-align: left;
+    width: 60%;
+    margin: auto;
+}
+
+.map{
+    padding-top: 100px;
+    border-radius: 20px;
+    height:700px;
+    width: 100%;
+    border-width: 0;
+}
+
+

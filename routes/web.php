@@ -19,11 +19,15 @@ use App\Http\Controllers\UserController;
 
 Route::view('/','home' )->name('home');
 
-Route::view('/catologo', 'catalogo')->name( 'catalogo');
+Route::view('/catalogo', 'catalog')->name( 'catalogo');
 
 Route::view('/faq', 'faq')->name('faq');
 
-Route::view('/contattaci', 'contattaci')->name('contattaci');
+Route::view('/who', 'who')->name('who');
+
+Route::view('/where', 'where')->name('where');
+
+Route::view('/cond_e_term', 'cond_e_term')->name('cond_e_term');
 
 //Route::get('/', HomeController::class, 'showHome')
 //    ->name('home');

@@ -1,0 +1,7 @@
+.element-container{
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid var(--color3);
+    width: 85%;
+}
+

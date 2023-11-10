@@ -30,7 +30,7 @@
 
     <!-- end #content -->
     <div id="footer">
-        @yield('footer')
+        @include('layouts.footer')
     </div>
     <!-- end #footer -->
 </div>

@@ -1,67 +1,32 @@
+@props(['catalog_element'=>[]])
+
 @extends('layouts.public')
 
-@section('title', 'Catalogo Prodotti')
+@section('title', 'Catalogo')
 
-<!-- inizio sezione prodotti -->
 @section('content')
-<div id="content">
-  @isset($products)
-    @foreach ($products as $product)
-    <div class="prod">
-        <div class="prod-bgtop">
-            <div class="prod-bgbtm">
-                <div class="oneitem">
-                    <div class="image">
-                        @include('helpers/productImg', ['attrs' => 'imagefrm', 'imgFile' => $product->image])
-                    </div>
-                    <div class="info">
-                        <h1 class="title">Prodotto: {{ $product->name }}</h1>
-                        <p class="meta">Descrizione Breve: {{ $product->descShort }}</p>
-                    </div>
-                    <div class="pricebox">
-                        @include('helpers/productPrice')
-                    </div>
-                </div>
-                <div class="entry">
-                    <p>Descrizione Estesa: {!! $product->descLong !!}</p>
-                </div>
-            </div>
+    <link rel="stylesheet" href="{{asset('css/catalog.css')}}">
+
+    <div class="catalog-container">
+        <h2 style="text-align: left; padding-bottom: 50px">Scegli il tuo veicolo:</h2>
+        <div class="catalog_element-container">
+
+            @foreach($catalog_element as $cars)
+                @include('partials.catalog_element',
+[
+    'brand'=>$catalog_element->brand,
+    'model'=>$catalog_element->model,
+    'number_of_seats'=>$catalog_element->number_of_seats,
+    'number_of_doors'=>$catalog_element->number_of_doors,
+    'transmission'=>$catalog_element->transmission,
+    'fuel'=>$catalog_element->fuel,
+    'price'=>$catalog_element->price,
+    'image_path'=> $catalog_element->image_path
+])
+            @endforeach
+
         </div>
     </div>
-    @endforeach
-
-    <!--Paginazione-->
-    @include('pagination.paginator', ['paginator' => $products])
-
-  @endisset()
-</div>
-
-<!-- fine sezione prodotti -->
-
-<div id="sidebar">
-    <ul>
-        <li>
-            <h2>Categorie</h2>
-            <ul>
-                @foreach ($topCategories as $category)
-                <li><a href="{{ route('catalog2', [$category->catId]) }}">{{ $category->name }}</a><span>{{ $category->desc }}</span></li>
-                @endforeach
-            </ul>
-        </li>
-
-        @isset($selectedTopCat)
-        <li>
-            <h2>In {{ $selectedTopCat->name }}</h2>
-            <ul>
-                @foreach ($subCategories as $subCategory)
-                <li><a href="{{ route('catalog3', [$selectedTopCat->catId, $subCategory->catId]) }}">{{ $subCategory->name }}</a><span>{{ $subCategory->desc }}</span></li>
-                @endforeach
-            </ul>
-        </li>
-        @endisset
-    </ul>
-</div>
-<!-- fine sezione laterale -->
 @endsection
 
 

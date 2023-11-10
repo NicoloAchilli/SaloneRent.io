@@ -11,7 +11,7 @@
             <a href="{{route('faq')}}" title="Vai alle FAQ">FAQ</a>
         </li>
         <li>
-            <a href="{{route('contattaci')}}" title="Contattaci">Contattaci</a>
+            <a href="{{route('where')}}" title="Contattaci">Contattaci</a>
         </li>
         <li>
             <div id="login-container">
